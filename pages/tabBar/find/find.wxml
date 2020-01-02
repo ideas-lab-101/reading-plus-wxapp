@@ -1,0 +1,46 @@
+<view class="triangle"></view>
+
+<view class="page-container" style="padding-top: {{statusBarHeight}}px;">
+    <view class="i-logo">
+        <image mode="widthFix" src="https://7265-reading-plus-vm4nm-1300905784.tcb.qcloud.la/system/logo.png?sign=5748caf697c1256b9f1338083007c2c6&t=1576159490"></image>
+    </view>
+    <view class="i-title bold">
+        <text>TITLE</text>
+        <text>医疗级科研团队</text>
+        <text>为您提供服务</text>
+    </view>
+
+    <view class="i-option">
+        <view class="common triangle01">
+            <view class="i-option-min">
+                <view class="i-option-title">劵列表信息</view>
+                <view class="i-option-title">增值服务信息</view>
+            </view>
+            <view class="i-item">
+                <button class="custom-button" catchtap="goBuyCoupon" hover-class="custom-button-hover">
+                    <view class="line" hover-class="custom-button-line-hover">购买劵</view>
+                </button>
+            </view>
+        </view>
+        <view class="gray"></view>
+    </view>
+
+    <view class="i-option">
+        <view class="common triangle02">
+            <view class="i-option-min">
+                <view class="i-option-title">最近的阅读加加</view>
+                <view class="i-option-title">地址信息列表</view>
+            </view>
+            <view class="i-item">
+                <button class="custom-button" catchtap="goAddressList" hover-class="custom-button-hover">
+                    <view class="line" hover-class="custom-button-line-hover">查看</view>
+                </button>
+            </view>
+        </view>
+        <view class="gray"></view>
+    </view>
+
+</view>
+
+<!--登录-->
+<wu-login id="wu-login"/>

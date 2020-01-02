@@ -1,0 +1,35 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="triangle"></view>
+
+<view class="page-container">
+
+  <form bindsubmit="formSubmit">
+    <view class="in-item"
+          wx:for="{{topic}}"
+          wx:key="code">
+      <view class="_title">{{index+1}}、{{item.stem}}</view>
+      <radio-group bindchange="radioChange" name="{{item.code}}" class="_radioGroup">
+          <radio value="{{answerItem.key}}"
+                 class="_radioItem"
+                 color="#52b981"
+                 wx:for="{{item.answer}}"
+                 wx:key="key"
+                 wx:for-index="answerIndex"
+                 wx:for-item="answerItem"
+                 checked="{{answerItem.checked}}">{{serial[answerIndex]}}、{{answerItem.value}}</radio>
+      </radio-group>
+    </view>
+
+    <view class="in-item link">
+      <button form-type="submit" class="custom-button in-button" hover-class="custom-button-hover">
+        <view class="line" hover-class="custom-button-line-hover">提交评估报告</view>
+      </button>
+    </view>
+  </form>
+
+</view>

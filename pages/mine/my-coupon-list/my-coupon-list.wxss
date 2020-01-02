@@ -1,0 +1,140 @@
+page{
+  background-color: #f7f7f7;
+}
+.page-container{
+  position: relative;
+  z-index: 10;
+  padding: 30rpx;
+}
+.triangle{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 40vw solid #f8f8f8;
+  border-left: 85vw solid transparent;
+}
+
+.cl-list{
+  margin-bottom: 30rpx;
+  position: relative;
+  background-color: white;
+  padding: 20rpx;
+}
+.cl-list>._insert{
+  padding: 30rpx;
+  border: 1rpx solid #448565;
+  position: relative;
+}
+.cl-list>._insert::after{
+  content: "券";
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  font-size: 150rpx;
+  font-weight: bold;
+  color: #f3f3f3;
+}
+.cl-list.free>._insert{
+  border-color: #2f308c;
+}
+.cl-list .cl-list-box{
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  z-index: 100;
+}
+.cl-list ._l{
+  flex: 1;
+}
+.cl-list .cl-list-title{
+  font-size: 34rpx;
+  font-weight: bold;
+  background-color: #448565;
+  color: white;
+  padding: 10rpx 20rpx;
+  position: relative;
+  z-index: 100;
+}
+.cl-list.free .cl-list-title{
+  background-color: #2f308c;
+}
+.cl-list ._desc{
+  color: #666666;
+  font-size: 22rpx;
+  margin-top: 40rpx;
+  display: block;
+  border: 1rpx solid #d6d6d6;
+  position: relative;
+}
+.cl-list ._desc text{
+  display: block;
+  padding: 15rpx 20rpx;
+  position: relative;
+}
+.cl-list ._desc::before{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  width: 90%;
+  height: 1rpx;
+  background-color: white;
+}
+.cl-list ._desc text::before{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  bottom: -1rpx;
+  width: 90%;
+  height: 1rpx;
+  background-color: white;
+}
+.cl-list ._time{
+  font-size: 22rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+.cl-list ._r{
+  flex: none;
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20rpx;
+  font-size: 22rpx;
+  padding-top: 40rpx;
+}
+.cl-list ._r text:last-child{
+  margin-top: 20rpx;
+}
+.cl-buy{
+  margin-top: 40rpx;
+  background-color: white;
+  color: #448565;
+  display: inline-block;
+  padding: 10rpx 30rpx;
+}
+
+.cl-buy{
+  margin-top: 40rpx;
+  background-color: white;
+  color: #448565;
+  display: inline-block;
+  padding: 10rpx 30rpx;
+}
+
+.mc-nodata{
+  text-align: center;
+  padding: 60rpx 40rpx;
+  color: #999999;
+  font-size: 28rpx;
+}
+.mc-nodata ._buy{
+  font-size: 34rpx;
+  display: inline-block;
+  padding: 10rpx 40rpx 10rpx 15rpx;
+}

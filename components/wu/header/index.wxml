@@ -1,0 +1,12 @@
+<wxs src="../../../wxs/clip.wxs" module="moduleClip" />
+
+<view class="header-container">
+    <image wx:if="{{src}}" lazy-load
+           class="_images"
+           mode="aspectFill" src="{{clip?moduleClip.pictureClip(src)['100']:src}}"
+           style="{{wrapStyle}}"
+           binderror="__imageError"></image>
+    <view wx:else class="_text" style="{{wrapStyle}}">
+        {{wrapText}}
+    </view>
+</view>

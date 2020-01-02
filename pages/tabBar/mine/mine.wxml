@@ -1,0 +1,21 @@
+<view class="page-container m-container" style="padding-top: {{statusBarHeight}}px;">
+
+  <view class="m-title">个人账户信息</view>
+
+  <view class="m-item">
+    <view class="_title"><view class="_shadow _s01">脑视觉健康档案</view></view>
+    <view hover-class="basic-hover" catchtap="goReport">脑视觉功能评估</view>
+    <view hover-class="basic-hover" catchtap="goTrain">我的训练记录</view>
+    <view hover-class="basic-hover" catchtap="goRemind">训练提醒</view>
+  </view>
+  <view class="m-item">
+    <view class="_title"><view class="_shadow _s02">会员服务</view></view>
+    <view hover-class="basic-hover" catchtap="goCouponList">我的劵</view>
+    <view hover-class="basic-hover" catchtap="goAbout">关于我们</view>
+    <button plain open-type="share" hover-class="basic-hover" class="share-button">分享应用</button>
+  </view>
+
+</view>
+
+<!--登录-->
+<wu-login id="wu-login"/>

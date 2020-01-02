@@ -1,0 +1,28 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="page-container">
+
+   <view wx:for="{{content.list}}" wx:key="store_id" class="al-list">
+      <view class="al-list-c">
+         <view class="_l"><text class="iconfont icon-dizhi1"></text>{{item.address_info}}</view>
+         <view class="_b" wx:if="{{item.add_time !== null}}">
+            <text class="iconfont icon-time"></text><text>{{item.add_time}}</text>
+         </view>
+         <view class="_b" wx:if="{{item.rank !== null}}">
+            <text>我的评价：</text><wux-rater slot="footer" star="★" fontSize="16" disabled default-value="{{ item.rank }}" margin="{{5}}"/>
+         </view>
+         <view class="_b" wx:if="{{item.feedback !== null}}">
+            <text>我的反馈：</text><text>{{item.feedback}}</text>
+         </view>
+      </view>
+   </view>
+
+   <wu-loading id="wu-loading"/>
+   <view wx:if="{{ content.list.length<=0 && !isLoading}}" class="mc-nodata">暂无训练记录!</view>
+   <view wx:if="{{content.lastPage && content.list.length>0 && !isLoading}}" class="mc-nodata">额，数据到底了!</view>
+
+</view>

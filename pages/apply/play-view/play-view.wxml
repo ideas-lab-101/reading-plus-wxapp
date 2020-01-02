@@ -1,0 +1,45 @@
+<wux-toast id="wux-toast" />
+<wxs src="./play-view.wxs" module="modulePlayView" />
+<!-- 引入图片预加载组件 -->
+<import src="../../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>
+
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view hidden="{{!loaded}}">
+    <view hidden="{{!(direction === 'portrait' && !playing)}}">
+        <view style="height: calc(100vh - {{2*(statusBarHeight+45)}}px)" class="pv-init">
+            <image mode="widthFix" src="https://7361-sagacity-radio-yi81j-1300877980.tcb.qcloud.la/system/box.png?sign=ce888af4b84dd6e8444d98d13df1ce1b&t=1576036001" id="image0"
+                   bindload="imageLoad" binderror="imageError"></image>
+            <text>脑视觉体验: <text class="_bulge">{{content.time}}</text>秒</text>
+            <text>获取AR/VR设备,请将手机插入设备</text>
+        </view>
+    </view>
+
+    <view hidden="{{!(direction !== 'portrait' && playing)}}" class="pv-conduct">
+        <view class="move {{playing?'left':''}}">
+            <image src="{{leftUrl}}" class="pv-img" id="image1"
+                   mode="widthFix" bindload="imageLoad" binderror="imageError"></image>
+        </view>
+        <view class="move {{playing?'right':''}}">
+            <image src="{{rightUrl}}" class="pv-img" id="image2"
+                   mode="widthFix" bindload="imageLoad" binderror="imageError"></image>
+        </view>
+    </view>
+
+    <view hidden="{{!(direction === 'portrait' && playing)}}">
+        <view style="height: calc(100vh - {{2*(statusBarHeight+45)}}px);" class="pv-time">
+            <text class="_t">体验时间</text>
+            <text>{{modulePlayView.transformationToTime(content.time)}}</text>
+        </view>
+    </view>
+</view>
+
+<!--预先处理加载-->
+<view hidden="{{loaded}}" class="pv-load">
+    <wu-loading id="wu-loading"/>
+</view>

@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "dark",
+  "disableSwipeBack": true,
+  "enablePullDownRefresh": false,
+  "disableScroll": false,
+  "usingComponents": {
+    "wux-rater": "wux-weapp/rater/index"
+  }
+}

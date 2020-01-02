@@ -1,0 +1,60 @@
+@import "/assets/styles/cloud-icon.wxss";
+
+.navigation-box{
+  height: 130rpx;
+  position: relative;
+  z-index: 999;
+}
+.navigation-box ._frame{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navigation-box ._frame ._c{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  line-height: 1;
+}
+.navigation-box ._back{
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+.navigation-box ._back ._text{
+  display: inline-block;
+  vertical-align: middle;
+}
+.navigation-box ._back ._text.iconfont{
+  font-size: 32rpx; margin-right: 4rpx;
+}
+.navigation-back-hover{
+  background: rgba(0, 0, 0, 0.04) ;
+}
+.navigation-box ._title-box{
+  flex: 1;
+  color: black;
+  font-size: 34rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-box ._title-box ._title{
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+

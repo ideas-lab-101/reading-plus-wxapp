@@ -1,0 +1,37 @@
+.page-container{
+  position: relative;
+  z-index: 10;
+  padding: 40rpx;
+}
+.triangle{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 0;
+  height:0;
+  border-top: 40vw solid #f8f8f8;
+  border-left: 85vw solid transparent;
+}
+
+.in-item{
+  margin-bottom: 80rpx;
+}
+
+.in-item>._title{
+  font-weight: bold;
+  font-size: 30rpx;
+  padding-bottom: 20rpx;
+}
+.in-item>._radioGroup{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+.in-item ._radioItem{
+  display: block;
+  padding: 20rpx;
+}
+.in-item ._radioItem.active{
+  background-color: #52b981;
+  color: white;
+}

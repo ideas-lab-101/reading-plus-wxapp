@@ -1,0 +1,6 @@
+<wu-animation-group wux-class="{{ classes.wrap }}"
+                     in="{{ in }}"
+                     classNames="{{ classNames }}"
+                     bind:click="onClick" wrapStyle="z-index: {{ zIndex }}; background: rgba(0, 0, 0, {{opacity}}); ">
+    <view class="_insert" catchtouchmove="noop"></view>
+</wu-animation-group>

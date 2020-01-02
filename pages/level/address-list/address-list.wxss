@@ -1,0 +1,70 @@
+page{
+  background-color: #f7f7f7;
+}
+.page-container{
+  position: relative;
+  z-index: 10;
+  padding-bottom: 40rpx;
+}
+.mc-nodata{
+  text-align: center;
+  padding: 40rpx;
+  color: #999999;
+  font-size: 22rpx;
+}
+
+.al-list-title{
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+.al-list{
+  background-color: white;
+  position: relative;
+  padding-left: 40rpx;
+  color: #999999;
+}
+.al-list ._insert{
+  padding-top: 40rpx;
+  padding-right: 40rpx;
+  padding-bottom: 40rpx;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-bottom-style: solid;
+  border-bottom-width: 1rpx;
+}
+.al-list ._name{
+  color: black;
+}
+.al-list-c{
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+.al-list-c ._l{
+  flex: 1;
+  line-height: 1.6;
+}
+.al-list-c ._l .iconfont{
+  font-size: 28rpx;
+}
+.al-list-c ._r{
+  padding-left: 20rpx;
+}
+.al-list-c ._k{
+  display: flex;
+  align-items: center;
+  color: #52b981;
+  padding-top: 5rpx;
+}
+.al-list-c ._k .iconfont{
+  border: 1rpx solid #52b981;
+  font-size: 18rpx;
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 30rpx;
+  border-radius: 100rpx;
+  display: inline-block;
+  text-align: center;
+  margin-left: 5rpx;
+}

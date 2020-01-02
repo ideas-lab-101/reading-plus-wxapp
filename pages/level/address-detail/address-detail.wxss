@@ -1,0 +1,28 @@
+page{
+  background-color: #f7f7f7;
+}
+.page-container{
+  position: relative;
+  z-index: 10;
+  padding-bottom: 40rpx;
+}
+
+.ad-option{
+  background-color: white;
+  padding: 40rpx 20rpx;
+  margin-bottom: 40rpx;
+}
+.ad-map{
+  margin-top: 20rpx;
+}
+
+.ad-option ._title{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.ad-option ._address{
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 20rpx;
+}

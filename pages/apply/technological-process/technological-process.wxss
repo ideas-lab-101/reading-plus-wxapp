@@ -1,0 +1,82 @@
+.page-container{
+  position: relative;
+  z-index: 10;
+}
+.triangle{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 0;
+  height:0;
+  border-top: 40vw solid #f8f8f8;
+  border-left: 85vw solid transparent;
+}
+
+.tp-title{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 38rpx;
+  padding-left: 60rpx;
+  margin-top: 60rpx;
+  line-height: 1.6;
+}
+.tp-title ._bulge{
+  font-size: 46rpx;
+  color: #418161;
+}
+
+.tp-option{
+  color: white;
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.tp-option .common{
+  background: url("https://7361-sagacity-radio-yi81j-1300877980.tcb.qcloud.la/system/common-back.png?sign=6e37e646ade93b5fd2b2277f480319f3&t=1575896447") repeat-y left top;
+  background-size: 100% auto;
+  color: white;
+  padding: 80rpx 50rpx;
+}
+.tp-option .gray{
+  background: url("https://7361-sagacity-radio-yi81j-1300877980.tcb.qcloud.la/system/gray-back.png?sign=c5f0e83383bcd7c00383906d44acab26&t=1575896958") repeat-y left top;
+  background-size: 100% auto;
+  height: 30rpx;
+}
+.tp-option ._item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 60rpx;
+}
+.tp-option ._item:last-child{
+  padding-bottom: 0;
+}
+.tp-option ._item ._b{
+  width: 135rpx;
+  flex: none;
+}
+.tp-option ._item ._c{
+  flex: 1;
+}
+.tp-option ._item ._f{
+  color: #0d8349;
+  font-size: 44rpx;
+  font-weight: bold;
+}
+.tp-link{
+  padding: 100rpx 40rpx 40rpx;
+}
+.tech-button{
+  width: 100% !important;
+  display: inline-block;
+  height: 90rpx;
+  font-size: 32rpx;
+  line-height: 2.666;
+}
+.tp-button{
+  width: 150rpx !important;
+  display: inline-block;
+  font-size: 24rpx;
+}

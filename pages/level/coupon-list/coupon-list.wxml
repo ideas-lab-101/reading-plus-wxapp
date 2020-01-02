@@ -1,0 +1,63 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="page-container">
+
+   <view wx:for="{{contentList}}" wx:key="coupon_id" class="cl-list {{item.coupon_type === 22?'free':''}}">
+      <view class="_insert">
+
+         <view class="cl-list-title">{{item.coupon_name}}</view>
+         <view class="cl-list-box">
+            <view class="_l">
+               <view class="_desc">
+                  <text>{{item.coupon_desc}}</text>
+               </view>
+            </view>
+            <view class="_r" wx:if="{{item.coupon_price>0}}">
+               <view class="cl-list-price"><text>￥</text><text class="_num">{{item.coupon_price}}</text></view>
+            </view>
+         </view>
+         <view class="cl-list-b">
+            <view class="cl-list-c" wx:if="{{item.coupon_price>0}}">
+               <text catchtap="goDeduction" data-index="{{index}}">使用兑换码</text>
+               <text catchtap="goBuy" data-index="{{index}}">直接购买</text>
+            </view>
+            <view class="cl-list-c" wx:else>
+               <text catchtap="goBuy" data-index="{{index}}">免费领取</text>
+            </view>
+         </view>
+
+      </view>
+
+   </view>
+
+</view>
+
+<!--登录-->
+<wu-login id="wu-login"/>
+
+
+<!--兑换码-->
+<wu-backdrop id="wu-backdrop" transparent="{{true}}" catchtap="noop" zIndex="200" opacity="0.4"></wu-backdrop>
+<wu-animation-group wux-class="exchange-code"
+                    duration="1500"
+                    in="{{ in }}"
+                    id ="popTrans"
+                    class-names="wux-animate--fadeInUp">
+   <view class="exchange-code-wrap" catchtouchmove="noop">
+      <form bindsubmit="formSubmit">
+         <text class="_close iconfont icon-guanbi" catchtap="freeDeduction"></text>
+         <view class="_option">输入兑换码：</view>
+         <view class="_option">
+            <input class="_input" type="number" focus="{{deduction.focus}}" placeholder="兑换码" name="code" value="{{deduction.value}}"/></view>
+         <view class="_option">
+            <button form-type="submit" class="custom-button exchange-button" hover-class="custom-button-hover">
+               <view class="line" hover-class="custom-button-line-hover">提交</view>
+            </button>
+         </view>
+      </form>
+   </view>
+</wu-animation-group>

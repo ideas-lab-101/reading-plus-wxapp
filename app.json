@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/tabBar/index/index",
+    "pages/tabBar/find/find",
+    "pages/tabBar/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "阅读加加",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#3b815f",
+    "backgroundColor": "#f5f5f5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/index/index",
+        "text": "加加",
+        "iconPath": "assets/images/index_blank.png",
+        "selectedIconPath": "assets/images/index_fill.png"
+      },
+      {
+        "pagePath": "pages/tabBar/find/find",
+        "text": "发现",
+        "iconPath": "assets/images/find_blank.png",
+        "selectedIconPath": "assets/images/find_fill.png"
+      },
+      {
+        "pagePath": "pages/tabBar/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/images/mine_blank.png",
+        "selectedIconPath": "assets/images/mine_fill.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pages/mine/",
+      "pages": [
+        "report/report",
+        "my-coupon-list/my-coupon-list",
+        "my-train-list/my-train-list",
+        "qrcode/qrcode"
+      ]
+    },
+    {
+      "root": "pages/level/",
+      "pages": [
+        "address-list/address-list",
+        "coupon-list/coupon-list",
+        "address-detail/address-detail"
+      ]
+    },
+    {
+      "root": "pages/apply/",
+      "pages": [
+        "technological-process/technological-process",
+        "investigation/investigation",
+        "play-view/play-view",
+        "feedback/feedback",
+        "info-content/info-content"
+      ]
+    }
+  ],
+  "style": "v2",
+  "usingComponents": {
+    "wu-navigation": "/components/wu/navigation/index",
+    "wu-loading": "/components/wu/loading/index",
+    "wu-backdrop": "/components/wu/backdrop/index",
+    "wu-animation-group": "/components/wu/animation-group/index"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于阅读加加展示"
+    }
+  }
+}

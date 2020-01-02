@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "dark",
+  "disableSwipeBack": true,
+  "enablePullDownRefresh": false,
+  "disableScroll": false,
+  "usingComponents": {
+    "wu-login": "../../../components/wu/login/index",
+    "wu-slogon": "../../../components/wu/slogon/index"
+  }
+}

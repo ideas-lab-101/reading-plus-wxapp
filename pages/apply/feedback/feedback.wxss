@@ -1,0 +1,32 @@
+.page-container{
+  position: relative;
+  z-index: 10;
+  padding: 40rpx;
+}
+
+.fb-title{
+  font-size: 42rpx;
+  padding: 40rpx 0;
+}
+.fb-option{
+  padding-bottom: 40rpx;
+}
+.fb-o{
+  padding: 20rpx 0;
+}
+
+.fb-area{
+  background-color: rgba(0, 0, 0, 0.08);
+  padding: 20rpx;
+  width: calc(100% - 40rpx);
+  height: 240rpx;
+  font-size: 30rpx;
+}
+
+.fb-button{
+  font-size: 32rpx;
+  line-height: 80rpx;
+  height: 90rpx;
+  font-weight: normal !important;
+  width: 100% !important;
+}

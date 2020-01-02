@@ -1,0 +1,46 @@
+var pictureClip = function (src) {
+  if(src == '' || src == undefined || src == null) {
+    return ''
+  }
+  if (src.indexOf('static/') != -1) {
+    return {
+      '100': src,
+      '200': src,
+      '300': src,
+      '400': src
+    }
+  }
+  return {
+    '100': src + '_100x100_crop.jpeg',
+    '200': src + '_200x200_crop.jpeg',
+    '300': src + '_300x300_crop.jpeg',
+    '400': src + '_400x400_crop.jpeg'
+  }
+}
+
+var videoClip = function (url, frame) {
+  if(frame) {
+    return {
+      '150': url + '_150x1000x' + frame +'.jpg',
+      '200': url + '_200x1000x' + frame +'.jpg'
+    }
+  }
+  return {
+    '150': url + '_150x1000x0.jpg',
+    '200': url + '_200x1000x0.jpg'
+  }
+}
+
+var videoClipRatio = function (url, width, height, windowWidth) {
+  if (width > height) {
+    return url + '_'+windowWidth+'x1000x0.jpg'
+  }
+  var _w = parseInt(width * windowWidth * 0.5 /height)
+  return url + '_'+_w+'x1000x0.jpg'
+}
+
+module.exports = {
+  pictureClip: pictureClip,
+  videoClip: videoClip,
+  videoClipRatio: videoClipRatio
+}

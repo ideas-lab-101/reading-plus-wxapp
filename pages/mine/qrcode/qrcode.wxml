@@ -1,0 +1,11 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="page-container">
+
+    <wux-qrcode id="qrcode" wux-class="qrcode" data="{{ item.coupon_no }}" fg-color="{{ qrcode.fgColor }}" width="70" height="70" bind:click="previewImage" />
+
+</view>

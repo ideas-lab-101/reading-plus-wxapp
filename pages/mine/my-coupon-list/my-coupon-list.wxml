@@ -1,0 +1,41 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="page-container">
+
+   <view wx:for="{{contentList}}" wx:key="coupon_id" class="cl-list {{item.coupon_type === 22?'free':''}}">
+      <view class="_insert">
+
+         <view class="cl-list-title">{{item.coupon_name}}</view>
+         <view class="cl-list-box">
+            <view class="_l">
+               <view class="_desc">
+                  <text>{{item.coupon_desc}}</text>
+               </view>
+               <view class="_time">领取时间：{{item.add_time}}</view>
+            </view>
+            <view class="_r">
+               <wux-qrcode wux-class="qrcode"
+                           id="{{'qrcode'+index}}"
+                           data="{{ item.coupon_no }}"
+                           fg-color="{{ qrcode.fgColor }}"
+                           width="70" height="70"
+                           bind:click="previewImage" />
+               <text>点击打开</text>
+            </view>
+         </view>
+
+      </view>
+   </view>
+
+   <view wx:if="{{contentList.length <= 0}}" class="mc-nodata">
+      <text>暂无体验券，请去</text><text class="_buy color-primary" catchtap="goBuy">购买</text>
+   </view>
+
+</view>
+
+<!--登录-->
+<wu-login id="wu-login"/>

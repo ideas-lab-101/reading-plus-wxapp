@@ -1,0 +1,47 @@
+@import '/components/wxParse/wxParse.wxss';
+
+.page-container{
+  position: relative;
+  z-index: 10;
+  padding: 20rpx;
+}
+.triangle{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 0;
+  height:0;
+  border-top: 40vw solid #f8f8f8;
+  border-left: 85vw solid transparent;
+}
+
+.in-item{
+  margin-bottom: 60rpx;
+}
+
+.in-item>._title{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.in-item>._radioGroup{
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+.in-item ._radioItem{
+  display: block;
+  margin-top: 30rpx;
+}
+.in-item.link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.in-button{
+  font-size: 32rpx;
+  line-height: 2.5;
+  height: 80rpx;
+  font-weight: bold;
+  width: 500rpx !important;
+}

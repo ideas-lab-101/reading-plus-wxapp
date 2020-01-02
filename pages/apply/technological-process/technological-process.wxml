@@ -1,0 +1,52 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="triangle" wx:if="{{content}}"></view>
+
+<view class="page-container" wx:if="{{content}}">
+
+  <view class="tp-title bold">
+    <text>TIPS</text>
+    <text>您是本训练</text>
+    <text>第<text class="_bulge">{{content.train_count}}</text>位体验者</text>
+  </view>
+
+  <view class="tp-option">
+    <view class="common">
+      <view class="_item">
+        <text class="_b">第一步</text>
+        <text class="_c">{{content.eye_account_info?'已有评估档案':'您还没有评估档案'}}</text>
+        <button class="custom-button tp-button" catchtap="goAssessment" hover-class="custom-button-hover">
+          <view class="line" hover-class="custom-button-line-hover">{{!content.eye_account_info?'开始评估':'去修改'}}</view>
+        </button>
+      </view>
+      <view class="_item">
+        <text class="_b">第二步</text>
+        <text class="_c" wx:if="{{content.coupon_num > 0}}">您还有 <text class="_f">{{content.coupon_num}}</text> 张视觉体验卡</text>
+        <text class="_c" wx:else>您还没有视觉体验卡</text>
+        <button class="custom-button tp-button" catchtap="goBuy" hover-class="custom-button-hover">
+          <view class="line" hover-class="custom-button-line-hover">去购买</view>
+        </button>
+      </view>
+    </view>
+    <view class="gray"></view>
+  </view>
+
+
+  <view class="tp-link">
+    <button class="custom-button {{content.eye_account_info && content.coupon_num > 0?'':'gray'}} tech-button" wx:if="{{!isAuthorizeScopeLocation}}"
+            catchtap="goStep"
+            hover-class="{{content.eye_account_info && content.coupon_num > 0?'custom-button-hover':''}}">
+      <view class="line" hover-class="{{content.eye_account_info && content.coupon_num > 0?'custom-button-line-hover':''}}">开始训练</view>
+    </button>
+    <button class="custom-button {{content.eye_account_info && content.coupon_num > 0?'':'gray'}} tech-button" wx:else
+            bindopensetting="openSettingAuthorize"
+            open-type="openSetting"
+            hover-class="{{content.eye_account_info && content.coupon_num > 0?'custom-button-hover':''}}">
+      <view class="line" hover-class="{{content.eye_account_info && content.coupon_num > 0?'custom-button-line-hover':''}}">开始训练</view>
+    </button>
+  </view>
+</view>

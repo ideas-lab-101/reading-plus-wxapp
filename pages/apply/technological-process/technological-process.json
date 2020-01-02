@@ -1,0 +1,7 @@
+{
+  "backgroundTextStyle": "dark",
+  "disableSwipeBack": true,
+  "enablePullDownRefresh": false,
+  "disableScroll": false,
+  "usingComponents": {}
+}

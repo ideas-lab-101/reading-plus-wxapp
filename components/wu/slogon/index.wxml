@@ -1,0 +1,13 @@
+<view class="wu-slogon-box {{leaveClass}}" wx:if="{{in}}" catchtouchmove="{{noop}}" bindtransitionend="transitionendEvent">
+    <image src="{{apply.scale === 1?sliders.x1:sliders.x2}}" mode="scaleToFill" class="_image" bindload="imageLoadEvent"></image>
+    <view class="_time" style="top:{{apply.statusBarHeight+8}}px;">{{time}} 秒跳过</view>
+    <view class="_del">
+        <!--<view class="_l">
+            <view class="_s">微信版本：{{apply.version}}</view>
+            <view class="_s">应用版本：{{version}}</view>
+        </view>-->
+        <view class="_r" bindtap="leaveEvent">
+            <text class="line">开始</text>
+        </view>
+    </view>
+</view>

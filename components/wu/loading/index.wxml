@@ -1,0 +1,8 @@
+<view class="loading-container" wx:if="{{ in }}">
+    <view class="loading-items">
+        <text class="_item c01"></text>
+        <text class="_item c02"></text>
+        <text class="_item c03"></text>
+    </view>
+    <view class="loading-txt">{{title}}</view>
+</view>

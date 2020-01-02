@@ -1,0 +1,30 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="page-container">
+
+   <view class="al-list-title">附件体验店</view>
+   <view wx:for="{{content.list}}" wx:key="store_id" class="al-list" hover-class="basic-hover" catchtap="goAddressDetail" data-id="{{item.store_id}}">
+      <view class="_insert">
+         <view class="_name">{{item.store_name}}</view>
+         <view class="al-list-c">
+            <view class="_l"><text class="iconfont icon-dizhi1"></text>{{item.store_address}}</view>
+            <view class="_r">
+               <text class="c666-color" wx:if="{{item.distance}}">{{item.distance}}米</text>
+               <view class="_k">
+                  <text>查看详情</text><text class="iconfont icon-arr-right"></text>
+               </view>
+            </view>
+         </view>
+      </view>
+   </view>
+
+
+   <wu-loading id="wu-loading"/>
+   <view wx:if="{{ content.list.length<=0 && !isLoading}}" class="mc-nodata">暂无地址记录!</view>
+   <view wx:if="{{content.lastPage && content.list.length>0 && !isLoading}}" class="mc-nodata">额，数据到底了!</view>
+
+</view>

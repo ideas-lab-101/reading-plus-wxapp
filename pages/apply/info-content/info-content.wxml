@@ -1,0 +1,15 @@
+<import src="/components/wxParse/wxParse.wxml" />
+
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="page-container" wx:if="{{content.content_type === 'html'}}">
+    <!--详情-->
+    <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+</view>
+
+
+<web-view src="{{content.content_url}}" bindload="webLoad" binderror="webError" wx:elif="{{content.content_type === 'url'}}"></web-view>

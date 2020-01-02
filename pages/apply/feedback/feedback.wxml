@@ -1,0 +1,32 @@
+<wu-navigation id="wu-navigation"
+               title="{{nav.title}}"
+               transparent="{{nav.transparent}}"
+               navTitle="{{nav.navTitle}}"
+               model="{{nav.model}}" />
+
+<view class="page-container">
+
+  <form bindsubmit="formSubmit">
+
+    <view class="fb-option">
+      <view>您对本次视觉体验的评分：</view>
+      <view class="fb-o">
+        <wux-rater slot="footer" star="★" default-value="{{ rater }}" margin="{{5}}" bindchange="raterChange"/>
+      </view>
+    </view>
+
+    <view class="fb-option">
+      <view>其他反馈意见：</view>
+      <view class="fb-o">
+        <textarea placeholder="输入内容" class="fb-area" name="feedback"/>
+      </view>
+    </view>
+
+    <view class="fb-option link">
+      <button form-type="submit" class="custom-button fb-button" hover-class="custom-button-hover">
+        <view class="line" hover-class="custom-button-line-hover">提交反馈</view>
+      </button>
+    </view>
+  </form>
+
+</view>

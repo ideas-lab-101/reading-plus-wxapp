@@ -1,0 +1,57 @@
+<wu-slogon id="wu-slogon" sliders="{{globalSlogon.urls}}" version="{{globalSlogon.version}}"/>
+
+<view class="triangle"></view>
+
+<view class="page-container" style="padding-top: {{statusBarHeight}}px;">
+    <view class="i-logo">
+        <image mode="widthFix" src="https://7265-reading-plus-vm4nm-1300905784.tcb.qcloud.la/system/logo.png?sign=5748caf697c1256b9f1338083007c2c6&t=1576159490"></image>
+    </view>
+
+    <swiper class="i-swiper">
+        <block wx:for="{{list}}" wx:key="info_id">
+            <swiper-item catchtap="goInfoContent" data-index="{{index}}">
+                <image class="image" mode="aspectFill" src="{{item.cover_url}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="i-option">
+        <view class="common triangle01">
+            <view class="i-option-min">
+                <view class="i-option-title">缓解视疲劳</view>
+                <view class="i-option-tip">
+                    <text>一次5分钟，采用短期可塑的视觉神经刺激信号（素材）进行训练，快速为您缓解视疲劳，提升视觉舒适度</text>
+                    <text catchtap="goInfoDelContent" data-id="21" class="link">>>详情</text>
+                </view>
+            </view>
+            <view class="i-item">
+                <button class="custom-button" catchtap="goProcess" hover-class="custom-button-hover">
+                    <view class="line" hover-class="custom-button-line-hover">开始</view>
+                </button>
+            </view>
+        </view>
+        <view class="gray"></view>
+    </view>
+
+    <view class="i-option">
+        <view class="common triangle02">
+            <view class="i-option-min">
+                <view class="i-option-title">训练</view>
+                <view class="i-option-tip">
+                    <text>结合前沿视觉科学与临床技术，通过轻松的互动游戏训练，达到经临床验证的中枢视觉信息加工处理能力提升效果，提高视觉抗疲劳的能力，延长视觉产生疲劳的时间，持续提升视觉舒适度。</text>
+                    <text catchtap="goInfoDelContent" data-id="22" class="link">>>详情</text>
+                </view>
+            </view>
+            <view class="i-item">
+                <button class="custom-button" catchtap="goTrain" hover-class="custom-button-hover">
+                    <view class="line" hover-class="custom-button-line-hover">开始</view>
+                </button>
+            </view>
+        </view>
+        <view class="gray"></view>
+    </view>
+
+</view>
+
+<!--登录-->
+<wu-login id="wu-login"/>

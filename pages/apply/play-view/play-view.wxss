@@ -1,0 +1,98 @@
+
+.pv-conduct{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  position: relative;
+}
+.pv-conduct::after{
+  content: "";
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 0;
+  width: 1rpx;
+  height: 100%;
+  background-color: #3d3d3d;
+}
+.pv-conduct .move.left{
+  animation: leftMove 5s infinite linear;
+  -webkit-animation: leftMove 5s infinite linear;
+}
+@keyframes leftMove {
+  0% { transform: translateX(0);}
+  25% {  transform: translateX(10px); }
+  50% {  transform: translateX(0px); }
+  50% {  transform: translateX(-10px); }
+  100% {  transform: translateX(0); }
+}
+@-webkit-keyframes leftMove {
+  0% { transform: translateX(0);}
+  25% {  transform: translateX(10px); }
+  50% {  transform: translateX(0px); }
+  50% {  transform: translateX(-10px); }
+  100% {  transform: translateX(0); }
+}
+.pv-conduct .move.right{
+  animation: rightMove 5s infinite linear;
+  -webkit-animation: rightMove 5s infinite linear;
+}
+@keyframes rightMove {
+  0% { transform: translateX(0);}
+  25% {  transform: translateX(-10px); }
+  50% {  transform: translateX(0px); }
+  50% {  transform: translateX(10px); }
+  100% {  transform: translateX(0); }
+}
+@-webkit-keyframes rightMove {
+  0% { transform: translateX(0);}
+  25% {  transform: translateX(-10px); }
+  50% {  transform: translateX(0px); }
+  50% {  transform: translateX(10px); }
+  100% {  transform: translateX(0); }
+}
+
+.pv-img{
+  width: 200px;
+}
+
+.pv-init{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.pv-init image{
+  width: 350rpx;
+  height: auto;
+}
+.pv-init text{
+  margin-top: 40rpx;
+}
+.pv-init ._bulge{
+  margin-top: 0;
+  color: #418161;
+  font-size: 42rpx;
+}
+.pv-load{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+
+.pv-time{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 90rpx;
+  font-weight: bold;
+}
+.pv-time ._t{
+  font-weight: normal;
+  font-size: 38rpx;
+  margin-bottom: 20rpx;
+}

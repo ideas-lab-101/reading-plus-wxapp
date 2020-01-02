@@ -1,0 +1,17 @@
+var transformationToTime = function (time) {
+    if (time < 0 || !time) {
+        return ''
+    }
+    var t = Math.ceil(time)
+    var max = parseInt(t / 60)
+    return filterTime(max) + ':' + filterTime(parseInt(t % 60))
+}
+
+var filterTime = function (num) {
+    return num < 10 ? '0'+num : num;
+}
+
+
+module.exports = {
+    transformationToTime: transformationToTime
+}

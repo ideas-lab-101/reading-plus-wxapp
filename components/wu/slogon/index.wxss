@@ -1,0 +1,62 @@
+.wu-slogon-box{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5999;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f7f7f7;
+  transition: opacity 0.5s;
+}
+.wu-slogon-box.leave{
+  opacity: 0;
+}
+.wu-slogon-box ._image{
+  width: 100%;
+  height: 100%
+}
+.wu-slogon-box ._time{
+  position: absolute;
+  z-index: 100;
+  top: 40rpx;
+  left: 40rpx;
+  border-radius: 500rpx;
+  padding:10rpx 40rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 26rpx;
+}
+
+.wu-slogon-box ._del{
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 25vh;
+}
+.wu-slogon-box ._del ._l ._s{
+  font-size: 24rpx;
+  margin-top: 8rpx;
+}
+.wu-slogon-box ._del ._l ._s:first-child{
+  margin-top: 0;
+}
+.wu-slogon-box ._del ._r{
+  border-radius: 15rpx;
+  background-color: white;
+  border: 0;
+  color: #52b981;
+  font-size: 32rpx;
+  padding: 10rpx;
+}
+.wu-slogon-box ._del ._r .line{
+  display: inline-block;
+  border: 1rpx solid #52b981;
+  padding: 0 70rpx;
+  line-height: 2.2;
+  border-radius: 15rpx;
+}
